@@ -9,7 +9,11 @@ namespace Zoolandia.Animals
 {
   class PanTroglodytes : Species
   {
-    public PanTroglodytes()
+        public string diet { get; set; }
+        public bool endangered { get; set; }
+        public string habitat { get; set; }
+
+        public PanTroglodytes()
     {
       this.commonName = "Chimpanzee";
       this.scientificName = "Pan Troglodytes";
@@ -18,45 +22,6 @@ namespace Zoolandia.Animals
       this.diet = "Fruit, leaves, bird eggs";
       this.habitat = "Woodlands and tropical rainforests";
       this.endangered = true;
-    }
-
-    public string diet
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
-    }
-
-    public bool endangered
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
-    }
-
-    public string habitat
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
     }
   }
 }
