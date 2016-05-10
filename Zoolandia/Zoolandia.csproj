@@ -67,6 +67,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Genus.cs" />
+    <Compile Include="Models\Habitat.cs" />
+    <Compile Include="Models\HabitatType.cs" />
+    <Compile Include="Models\Maintenance.cs" />
+    <Compile Include="Models\Species.cs" />
     <Compile Include="Server\AnimalHandler.cs" />
     <Compile Include="Animals\Animal.cs" />
     <Compile Include="Animals\Booby.cs" />
