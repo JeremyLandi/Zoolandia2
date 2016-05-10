@@ -2,35 +2,52 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Zoolandia.Animals;
 
 namespace Zoolandia
 {
-  class Program
-  {
-    static void Main(string[] args)
+    public class Program
     {
-    Habitat savanna = new Habitat();
-    Habitat snakePit = new Habitat();
-    Habitat aviary = new Habitat();
-    Habitat aquarium = new Habitat();
+        public static int Main(string[] args)
+        {
 
-    Pool seaPool = new Pool();
+            HttpServer httpServer;
+            if (args.GetLength(0) > 0)
+            {
+                httpServer = new MyHttpServer(Convert.ToInt16(args[0]));
+            }
+            else
+            {
+                httpServer = new MyHttpServer(8080);
+            }
+            Thread thread = new Thread(new ThreadStart(httpServer.listen));
+            thread.Start();
+            return 0;
+        }
+    }
+}
+            //Habitat savanna = new Habitat();
+            //Habitat snakePit = new Habitat();
+            //Habitat aviary = new Habitat();
+            //Habitat aquarium = new Habitat();
 
-    savanna.inhabitants = new List<Animal>();
+            //Pool seaPool = new Pool();
 
-    Bear yogi = new Bear();
-    yogi.name = "Yogi the Bear";
-    yogi.species = new PanPaniscus();
+            //savanna.inhabitants = new List<Animal>();
 
-    savanna.inhabitants.Add(yogi);
+            //Bear yogi = new Bear();
+            //yogi.name = "Yogi the Bear";
+            //yogi.species = new PanPaniscus();
 
-      foreach (Animal a in savanna.inhabitants)
-      {
-        Console.WriteLine();
-      }
-    
+            //savanna.inhabitants.Add(yogi);
+
+            //foreach (Animal a in savanna.inhabitants)
+            //{
+            //  Console.WriteLine();
+            //}
+
             //BlackBear yogi = new BlackBear(240);
             //yogi.bearName = "Black Bear";
             //yogi.diet = "Honey, salmon, berries, small mammals";
@@ -91,7 +108,7 @@ namespace Zoolandia
             //Narwhal.habitat = "Artic, Atlantic, and Pacific Oceans";
             //Narwhal.endangered = true;
 
-            
+
             //Ape Gibbon = new Ape(20);
             //Gibbon.apeName = "Gibbon";
             //Gibbon.diet = "Fruit, leaves";
@@ -121,6 +138,6 @@ namespace Zoolandia
             //Bonobo.diet = "Primarily fruit, but they also eat leaves, flowers, bark, stems, roots, insect";
             //Bonobo.habitat = "Tropical and subtropical forests";
             //Bonobo.endangered = true;
-        }
-    }
-}
+//        }
+//    }
+//}

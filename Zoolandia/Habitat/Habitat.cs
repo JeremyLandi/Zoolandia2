@@ -9,7 +9,6 @@ namespace Zoolandia
 {
   class Habitat
   {
-    public bool hasWalls;
     public bool outside;
     public string climateType;
     public bool isAquatic;
@@ -17,11 +16,11 @@ namespace Zoolandia
     public double width;
     public double depth;
     public double height;
-    public int windowCount;
 
     //aggrigate - hasA (strongly typed collection = can only contain what is in the list)
-    public List<Animal> inhabitants;
-    List<Decoration> decorations { get; set; }
+    public List<Animal> inhabitants = new List<Animal>();
+    public string public_name { get; set; }
+    //List<Decoration> decorations { get; set; }
 
   }
 }

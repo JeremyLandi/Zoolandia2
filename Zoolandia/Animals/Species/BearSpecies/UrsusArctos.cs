@@ -9,6 +9,10 @@ namespace Zoolandia.Animals
 {
   class UrsusArctos : Species
   {
+    public string diet { get; set; }
+    public bool endangered { get; set; }
+    public string habitat { get; set; }
+
     public UrsusArctos()
     {
       this.commonName = "Brown Bear";
@@ -18,45 +22,6 @@ namespace Zoolandia.Animals
       this.diet = "Deer, nuts, elk, grass";
       this.habitat = "Mountain Woodlands";
       this.endangered = false;
-    }
-
-    public string diet
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
-    }
-
-    public string habitat
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
-    }
-
-    public bool endangered
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
     }
   }
 }

@@ -9,6 +9,10 @@ namespace Zoolandia.Animals
 {
   class UrsusAmericanus : Species
   {
+    public string diet { get; set; }
+    public bool endangered { get; set; }
+    public string habitat { get; set; }
+
     public UrsusAmericanus()
     {
       this.commonName = "North American Black Bear";
@@ -18,45 +22,6 @@ namespace Zoolandia.Animals
       this.diet = "Honey, salmon, berries, small mammals";
       this.habitat = "Forests";
       this.endangered = false;
-    }
-
-    public string diet
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
-    }
-
-    public bool endangered
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
-    }
-
-    public string habitat
-    {
-      get
-      {
-        throw new NotImplementedException();
-      }
-
-      set
-      {
-        throw new NotImplementedException();
-      }
     }
   }
 }
